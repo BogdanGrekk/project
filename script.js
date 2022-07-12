@@ -24,8 +24,8 @@ function rememberMyFilms() {
     let nameOFFilm = [];
     let gradeOfFilm = [];
     first: for (let i = 0; i < 2; i++) {
-        nameOFFilm[i] = prompt('Один із останніх переглянутих фільмів?','');
-        gradeOfFilm[i] = prompt('На скільки ви його оціните?','');
+        nameOFFilm[i] = prompt('Один із останніх переглянутих фільмів?','').trim();
+        gradeOfFilm[i] = prompt('На скільки ви його оціните?','').trim();
         personalMovieDB.movies[nameOFFilm[i]] = gradeOfFilm[i];
         if ((nameOFFilm[i].length > 50 || nameOFFilm[i].length == 0 || nameOFFilm[i].length == null) || 
         (gradeOfFilm[i].length > 50 || gradeOfFilm[i].length == 0 || gradeOfFilm[i].length == null)) {
